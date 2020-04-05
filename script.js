@@ -4,7 +4,13 @@ function init() {
 		localStorage.setItem("bookmarkCount", "0");
 	} else {
 		addQuickAccessToPage();
-	}	
+	}
+	// add event listener to searchbox
+	document.getElementById("searchbox").addEventListener("keydown", function(event) {
+		if (event.keyCode === 13) {
+			search(document.getElementById("searchbox").value);
+		}
+	});
 }
 
 function search(searchQuery) {
