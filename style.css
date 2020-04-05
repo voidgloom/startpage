@@ -43,7 +43,7 @@ body {
 }
 
 .quickaccess-link-background {
-	position: absolute;
+	position: relative;
 	width: 128px;
 	height: 126px;
 	background-image: linear-gradient(180deg, #50fa7b, #50fa7b);
