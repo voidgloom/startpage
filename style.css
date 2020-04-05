@@ -1,0 +1,94 @@
+@keyframes hoverOverQuickAccessLink {
+	from {background: linear-gradient(180deg, #262626 90%, #50fa7b 90%);}
+	to {background: #50fa7b;}
+}
+
+body {
+	position: absolute;
+	z-index: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #212121;
+	display: grid;
+	grid-template-areas: "searchbox quickaccess";
+}
+
+#searchbox {
+	background-color: #262626;
+	padding: 5px;
+	width: 100%;
+	margin-top: 20vh;
+	color: #ffffff;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 2px solid white;
+}
+
+#searchdiv {
+	grid-area: searchbox;
+}
+
+#quickaccess-box {
+	display: flex;
+	flex-wrap: wrap;
+	top: 50%;
+	padding-top: 20vh;
+	padding-left: 5vw;
+	grid-area: quickaccess;
+
+}
+
+.quickaccess-link-background {
+	position: absolute;
+	width: 100px;
+	height: 98px;
+	background-image: linear-gradient(180deg, #50fa7b, #50fa7b);
+	background-position: 100% 100%;
+	background-size: 100% 0%;
+	background-repeat: no-repeat;
+	color: #ffffff;
+	transition: background-size .5s;
+	border-bottom: 2px solid #50fa7b;
+}
+
+.quickaccess-link-background:hover {
+	background-size: 100% 100%;
+	color: #000000;
+}
+
+.quickaccess-link {
+	display: grid;
+	grid-template-areas: 
+	"icon"
+	"linkname";
+	background-color: #262626;
+	width: 100px;
+	height: 96px;
+}
+
+.quickaccess-link-text {
+	grid-area: linkname;
+	text-align: center;
+}
+
+.quickaccess-link-image {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	filter: invert(100%);
+}
+
+.quickaccess-link-background:hover > .quickaccess-link-image {
+	filter:invert(0%);
+}
+
+#dialogbox {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: #212121;
+	z-index: 69420; /* nice */
+	display: none;
+}
+

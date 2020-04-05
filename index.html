@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script src="script.js" defer></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="searchdiv">
+			<label id="searchkind-image"></label>
+			<input id="searchbox" type="text" placeholder="please enter your search here..."></input>
+		</div>
+
+		<div id="quickaccess-box">
+			<div class="quickaccess-link" onclick="dialog_quickaccess_add_dialog_show()" tr-bookmark-purpose="add-bookmark">
+				<div class="quickaccess-link-background">
+					<img class="quickaccess-link-image" src="assets/plus.png" width=64 height=64>
+					<p class="quickaccess-link-text">Add Bookmark</p>
+				</div>
+			</div>
+		</div>
+		
+	<body>
+	<div id="dialogbox">
+		<div id="quickaccess-add-dialog">
+			<p class="dialog">URL:</p>
+			<input id="quickaccess-add-dialog-urlinput" class="dialog-textinput"></input>
+			<input id="quickaccess-add-dialog-nameinput" class="dialog-textinput"></input>
+			<input id="quickaccess-add-dialog-acceptbutton" type="button" class="dialog-button" onclick="dialog_quickaccess_add_dialog_submit()"></input>
+		</div>
+	</div>
+</html>
