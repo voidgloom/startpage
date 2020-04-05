@@ -14,7 +14,30 @@ function init() {
 }
 
 function search(searchQuery) {
-	window.open("https://duckduckgo.com/?q=" + searchQuery.replace(" ", "+"), "_self");
+	switch (searchQuery.slice(1)) {
+		case "!":
+			switch (searchQuery.slice(2)) {
+				case "!y":
+					window.open("https://youtube.com/results?search_query=" + searchQuery.slice(3), "_self");
+				break;
+				case "!w":
+					window.open("https://wikipedia.org/wiki/Special:Search?search=" + searchQuery.slice(3), "_self");
+				break;
+				case "!r":
+					window.open("https://reddit.com/search/?q=" + searchQuery.slice(3), "_self");
+				break;
+				default:
+					window.open("https://duckduckgo.com/?q=" + searchQuery.replace(" ", "+"), "_self");
+			}
+		break;
+		case "r":
+			if (searchQuery.slice(2) === "r/") {
+				window.open("https://reddit.com/" + searchQuery, "_self")
+			}
+		break;
+		default:
+			window.open("https://duckduckgo.com/?q=" + searchQuery.replace(" ", "+"), "_self");
+	}
 }
 
 function addPageToQuickAccess(url, name) {
