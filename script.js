@@ -80,6 +80,7 @@ function dialog_quickaccess_add_dialog_submit() {
 		addPageToQuickAccess(bookmarkUrl, bookmarkName);
 	}
 	document.getElementById("dialogbox").style.display = "none";
+	location.reload();
 }
 
 init();
@@ -89,5 +90,5 @@ function dialog_quickaccess_add_dialog_show() {
 }
 
 function openBookmark(htmlElement) {
-	window.open(htmlElement.attributes[1].value, "_self")
+	window.open(htmlElement.attributes[1].value, "_self");
 }

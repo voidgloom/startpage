@@ -21,10 +21,11 @@
 	<body>
 	<div id="dialogbox">
 		<div id="quickaccess-add-dialog">
-			<p class="dialog">URL:</p>
-			<input id="quickaccess-add-dialog-urlinput" class="dialog-textinput"></input>
-			<input id="quickaccess-add-dialog-nameinput" class="dialog-textinput"></input>
-			<input id="quickaccess-add-dialog-acceptbutton" type="button" class="dialog-button" onclick="dialog_quickaccess_add_dialog_submit()"></input>
+			<p class="dialog-label">URL:</p>
+			<input id="quickaccess-add-dialog-urlinput" class="dialog-textinput" placeholder="enter url of bookmark"></input>
+			<p class="dialog-label">Name:</p>
+			<input id="quickaccess-add-dialog-nameinput" class="dialog-textinput" placeholder="enter name of bookmark"></input>
+			<button id="quickaccess-add-dialog-acceptbutton" class="dialog-button" onclick="dialog_quickaccess_add_dialog_submit()">Add</button>
 		</div>
 	</div>
 </html>

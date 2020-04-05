@@ -2,6 +2,9 @@
 	from {background: linear-gradient(180deg, #262626 90%, #50fa7b 90%);}
 	to {background: #50fa7b;}
 }
+* {
+	font-family: "Noto Sans Mono";
+}
 
 body {
 	position: absolute;
@@ -41,8 +44,8 @@ body {
 
 .quickaccess-link-background {
 	position: absolute;
-	width: 100px;
-	height: 98px;
+	width: 128px;
+	height: 126px;
 	background-image: linear-gradient(180deg, #50fa7b, #50fa7b);
 	background-position: 100% 100%;
 	background-size: 100% 0%;
@@ -63,8 +66,8 @@ body {
 	"icon"
 	"linkname";
 	background-color: #262626;
-	width: 100px;
-	height: 96px;
+	width: 128px;
+	height: 126px;
 }
 
 .quickaccess-link-text {
@@ -92,3 +95,23 @@ body {
 	display: none;
 }
 
+.dialog-label {
+	color: #ffffff;
+}
+
+.dialog-textinput {
+	background-color: #262626;
+	color: #ffffff;
+	padding: 3px;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 2px solid white;
+}
+
+.dialog-button {
+	background-color: #333333;
+	border: 0;
+	color: #ffffff;
+	padding: 5px;
+}
