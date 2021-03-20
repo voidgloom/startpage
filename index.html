@@ -2,8 +2,14 @@
 	<head>
 		<script src="script.js" defer></script>
 		<link rel="stylesheet" href="style.css">
+		<title>New tab</title>
 	</head>
 	<body>
+
+		<div id="webstorage-notice">
+			<p class="dialog-label">this website uses webstorage to store bookmarks</p>
+			<button class="dialog-button" onclick="consent_webstorage()">ok</button> 
+		</div>
 		<div id="searchdiv">
 			<label id="searchkind-image"></label>
 			<input id="searchbox" type="text" placeholder="please enter your search here..."></input>
@@ -17,7 +23,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 	<body>
 	<div id="dialogbox">
 		<div id="quickaccess-add-dialog">

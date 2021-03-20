@@ -11,6 +11,9 @@ function init() {
 			search(document.getElementById("searchbox").value);
 		}
 	});
+	if (localStorage.getItem("webstorage") == "consent") {
+		document.getElementById("webstorage-notice").style.display = "none";
+	}
 }
 
 function search(searchQuery) {
@@ -73,14 +76,20 @@ function addQuickAccessToPage() {
 	}
 }
 
+function consent_webstorage() {
+	localStorage.setItem("webstorage", "consent")
+	document.getElementById("webstorage-notice").style.display = "none";
+}
+
 function dialog_quickaccess_add_dialog_submit() {
 	var bookmarkUrl = document.getElementById("quickaccess-add-dialog-urlinput").value;
 	var bookmarkName = document.getElementById("quickaccess-add-dialog-nameinput").value;
 	if (bookmarkUrl != "" && bookmarkName != "") {
+		document.getElementById("quickaccess-box").innerHTML = '<div class="quickaccess-link" onclick="dialog_quickaccess_add_dialog_show()" tr-bookmark-purpose="add-bookmark"><div class="quickaccess-link-background"><img class="quickaccess-link-image" src="assets/plus.png" width=64 height=64><p class="quickaccess-link-text">Add Bookmark</p></div></div>';
 		addPageToQuickAccess(bookmarkUrl, bookmarkName);
+		addQuickAccessToPage();
 	}
 	document.getElementById("dialogbox").style.display = "none";
-	location.reload();
 }
 
 init();
