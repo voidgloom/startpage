@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<script src="script.js" defer></script>
@@ -5,11 +6,8 @@
 		<title>New tab</title>
 	</head>
 	<body>
+		<div id="settings-cog">⚙</div>
 
-		<div id="webstorage-notice">
-			<p class="dialog-label">this website uses webstorage to store bookmarks</p>
-			<button class="dialog-button" onclick="consent_webstorage()">ok</button> 
-		</div>
 		<div id="searchdiv">
 			<label id="searchkind-image"></label>
 			<input id="searchbox" type="text" placeholder="please enter your search here..."></input>
@@ -32,6 +30,7 @@
 			<p class="dialog-label">Name:</p>
 			<input id="quickaccess-add-dialog-nameinput" class="dialog-textinput" placeholder="enter name of bookmark"></input>
 			<button id="quickaccess-add-dialog-acceptbutton" class="dialog-button" onclick="dialog_quickaccess_add_dialog_submit()">Add</button>
+			<button id="quickaccess-add-dialog-acceptbutton" class="dialog-button" onclick="dialog_quickaccess_add_cancel()">Cancel</button>
 		</div>
 	</div>
 </html>
